@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+<script type='text/javascript' src='./js/fastclick.min.js'></script>
+<script type='text/javascript' src='./js/stopwatch.js'></script>
+<script type='text/javascript' src="./js/lawnchair.min.js"></script>
+<script type='text/javascript' src="./js/app.js"></script>
+<style>
+input[type=button] {
+    font: 3em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+    font-size: 24px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    margin-left: 20px;
+}
+.container {
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+    <div>
+        <input type="button" value="start" onclick="start();" />
+        <input type="button" value="stop" onclick="stop();" />
+        <input type="button" value="reset" onclick="reset()" />
+        <div class="container">Time: <span id="time"></span></div>
+        <input type="button" value="save" id="saveEvent" />
+        <input type="button" value="POST" id="saveLogToServer" />
+    </div>
+    <div id="HI">
+        <pre id="log">
+            
+        </pre>
+    </div>
+</body>
+</html>
